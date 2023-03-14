@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/screens/sign_in_and_up/sign_in.dart';
 import 'package:e_commerce_v2/screens/splash/components/splash_content.dart';
 import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
@@ -66,7 +67,9 @@ class _BodyState extends State<Body> {
                   Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
-                    child: ContinueButton(text: "Continue", onPress: (){},),
+                    child: ContinueButton(text: "Continue", onPress: (){
+                      Navigator.pushNamed(context, signInScreen.routeName);
+                    },),
                   ),
                 SizedBox(),
               ],

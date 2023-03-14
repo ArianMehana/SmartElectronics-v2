@@ -1,21 +1,15 @@
 import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/navigationalRoutes.dart';
 import 'package:e_commerce_v2/screens/splash/splashScreen.dart';
+import 'package:e_commerce_v2/themeData.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 void main() {
   runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          scaffoldBackgroundColor: Colors.white,
-          fontFamily: "Muli",
-          textTheme: TextTheme(
-            bodyLarge: TextStyle(color: kTextColor),
-            bodyMedium: TextStyle(color: kTextColor)
-          ),
-          visualDensity: VisualDensity.adaptivePlatformDensity
-        ),
+        theme: themeData(),
         initialRoute: SplashScreen.routeName,
         routes: routes,
         //home: SplashScreen(),
@@ -30,3 +24,5 @@ class MyApp extends StatelessWidget {
     return const Placeholder();
   }
 }
+
+
