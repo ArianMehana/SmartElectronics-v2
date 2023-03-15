@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/screens/forgot_password/forgot_password.dart';
+import 'package:e_commerce_v2/screens/sign_up/sign_up.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -17,7 +18,7 @@ class signUpText extends StatelessWidget {
               fontSize: getProportionateScreenWidth(16)
           ),),
         GestureDetector(
-          onTap: () {},
+          onTap: () => Navigator.pushNamed(context, signUpScreen.routeName),
           child: Text("Sign up",
             style: TextStyle(
                 fontSize: getProportionateScreenWidth(16),
