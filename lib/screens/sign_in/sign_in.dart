@@ -1,4 +1,4 @@
-import 'package:e_commerce_v2/screens/sign_in_and_up/components/body.dart';
+import 'package:e_commerce_v2/screens/sign_in/components/body.dart';
 import 'package:flutter/material.dart';
 
 class signInScreen extends StatelessWidget {
@@ -11,7 +11,7 @@ class signInScreen extends StatelessWidget {
         title: Text("Sign In"),
         centerTitle: true,
       ),
-      body: body(),
+      body: signInBody(),
     );
   }
 }
