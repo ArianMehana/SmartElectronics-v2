@@ -70,7 +70,7 @@ class _signUpFormState extends State<signUpForm> {
         return null;
       },
       validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
+        if(value!.isEmpty){
           return "";
         }
         else if(password != value){
@@ -102,7 +102,6 @@ class _signUpFormState extends State<signUpForm> {
           removeError(error: kShortPassError);
         }
         password = value;
-        return null;
       },
       validator: (value) {
         if(value!.isEmpty){   //value! should be nullable...

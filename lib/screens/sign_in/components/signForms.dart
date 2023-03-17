@@ -129,7 +129,7 @@ class _signFormsState extends State<signForms> {
         return null;
       },
       validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
+        if(value!.isEmpty){
           addError(error: kEmailNullError);
           return "";
         }

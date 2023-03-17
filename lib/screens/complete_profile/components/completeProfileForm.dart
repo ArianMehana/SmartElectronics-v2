@@ -1,3 +1,4 @@
+import 'package:e_commerce_v2/screens/accountVerification/verification_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -16,7 +17,7 @@ class completeProfileForm extends StatefulWidget {
 class _completeProfileFormState extends State<completeProfileForm> {
 
   final _formKey = GlobalKey<FormState>();
-  final List<String> errors =[];
+  final List<String> errors = [];
   String? firstName;
   String? lastName;
   String? phoneNumber;
@@ -35,63 +36,57 @@ class _completeProfileFormState extends State<completeProfileForm> {
         errors.remove(error);
       });
   }
+
   @override
   Widget build(BuildContext context) {
     return Form(
-        child: Column(
-          key: _formKey,
-          children: [
-            buildFirstNameFormField(),
-            SizedBox(
-              height: getProportionateScreenHeight(30),
-            ),
-            buildLastNameFormField(),
-            SizedBox(
-              height: getProportionateScreenHeight(30),
-            ),
-            buildPhoneNumberFormField(),
-            SizedBox(
-              height: getProportionateScreenHeight(30),
-            ),
-            buildLocationFormField(),
-            formErrorText(errors: errors,),
-            SizedBox(
-              height: getProportionateScreenHeight(40),
-            ),
-            ContinueButton(
-              text: "Proceed to Products",
-              onPress: (){
-                if(_formKey.currentState!.validate()){
-                }
-              },
-            ),
-          ],
-        ));
+      key: _formKey,
+      child: Column(
+        children: [
+          buildFirstNameFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          buildLastNameFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          buildPhoneNumberFormField(),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          buildAddressFormField(),
+          formErrorText(errors: errors),
+          SizedBox(height: getProportionateScreenHeight(40)),
+          ContinueButton(
+            text: "continue",
+            onPress: () {
+              if (_formKey.currentState!.validate()) {
+                Navigator.pushNamed(context, accountVerification.routeName);
+              }
+            },
+          ),
+        ],
+      ),
+    );
   }
 
-  TextFormField buildLocationFormField() {
+  TextFormField buildAddressFormField() {
     return TextFormField(
-      onSaved: (newValue) => address = newValue!,
-      onChanged: (value){
-        if(value.isNotEmpty){   //value! should be nullable...
+      onSaved: (newValue) => address = newValue,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
           removeError(error: kAddressNullError);
         }
-
         return null;
       },
       validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
+        if (value!.isEmpty) {
           addError(error: kAddressNullError);
           return "";
         }
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Enter your first name",
-        labelText: "First Name",
+        labelText: "Address",
+        hintText: "Enter your phone address",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: customSuffixIcon(
-          svgIcon: "assets/icons/LocationPoint.svg",),
+        suffixIcon:
+        customSuffixIcon(svgIcon: "assets/icons/world_location.svg"),
       ),
     );
   }
@@ -99,81 +94,62 @@ class _completeProfileFormState extends State<completeProfileForm> {
   TextFormField buildPhoneNumberFormField() {
     return TextFormField(
       keyboardType: TextInputType.phone,
-      onSaved: (newValue) => phoneNumber = newValue!,
-      onChanged: (value){
-        if(value.isNotEmpty){   //value! should be nullable...
+      onSaved: (newValue) => phoneNumber = newValue,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
           removeError(error: kPhoneNumberNullError);
         }
-
         return null;
       },
       validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
+        if (value!.isEmpty) {
           addError(error: kPhoneNumberNullError);
           return "";
         }
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Enter your phone number",
         labelText: "Phone Number",
+        hintText: "Enter your phone number",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: customSuffixIcon(
-          svgIcon: "assets/icons/Phone.svg",),
+        suffixIcon: customSuffixIcon(svgIcon: "assets/icons/Phone.svg"),
       ),
     );
   }
 
   TextFormField buildLastNameFormField() {
     return TextFormField(
-      onSaved: (newValue) => lastName = newValue!,
-      onChanged: (value){
-        if(value.isNotEmpty){   //value! should be nullable...
-          removeError(error: kNameNullError);
-        }
-
-        return null;
-      },
-      validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
-          addError(error: kNameNullError);
-          return "";
-        }
-        return null;
-      },
+      onSaved: (newValue) => lastName = newValue,
       decoration: InputDecoration(
-        hintText: "Enter your last name",
         labelText: "Last Name",
+        hintText: "Enter your last name",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: customSuffixIcon(
-          svgIcon: "assets/icons/User.svg",),
+        suffixIcon: customSuffixIcon(svgIcon: "assets/icons/User.svg"),
       ),
     );
   }
 
   TextFormField buildFirstNameFormField() {
     return TextFormField(
-      onSaved: (newValue) => firstName = newValue!,
-      onChanged: (value){
-        if(value.isNotEmpty){   //value! should be nullable...
+      onSaved: (newValue) => firstName = newValue,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
           removeError(error: kNameNullError);
         }
-
         return null;
       },
       validator: (value) {
-        if(value!.isEmpty){   //value! should be nullable...
+        if (value!.isEmpty) {
           addError(error: kNameNullError);
           return "";
         }
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Enter your first name",
         labelText: "First Name",
+        hintText: "Enter your first name",
         floatingLabelBehavior: FloatingLabelBehavior.always,
-        suffixIcon: customSuffixIcon(
-          svgIcon: "assets/icons/User.svg",),
+        suffixIcon: customSuffixIcon(svgIcon: "assets/icons/User.svg"),
       ),
     );
   }
