@@ -1,3 +1,4 @@
+import 'package:e_commerce_v2/screens/successful_login/components/body.dart';
 import 'package:flutter/material.dart';
 
 class successfulLogin extends StatelessWidget {
@@ -11,6 +12,7 @@ class successfulLogin extends StatelessWidget {
         title: Text("Login success"),
         centerTitle: true,
       ),
+      body: successLoginBody(),
     );
   }
 }
