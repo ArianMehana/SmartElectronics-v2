@@ -1,3 +1,4 @@
+import 'package:e_commerce_v2/screens/cart/cart.dart';
 import 'package:e_commerce_v2/screens/home/components/searchTextField.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class mainProductsHeader extends StatelessWidget {
         children: [
           searchTextField(),
           cartCounter(itemCounter: 0,
-            onPress: (){},),
+            onPress: () => Navigator.pushNamed(context, cartMain.routeName),),
         ],
       ),
     );

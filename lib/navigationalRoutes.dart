@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/screens/accountVerification/verification_screen.dart';
+import 'package:e_commerce_v2/screens/cart/cart.dart';
 import 'package:e_commerce_v2/screens/complete_profile/complete_profile.dart';
 import 'package:e_commerce_v2/screens/forgot_password/forgot_password.dart';
 import 'package:e_commerce_v2/screens/home/homeScreen.dart';
@@ -19,4 +20,5 @@ final Map<String, WidgetBuilder> routes = {
   accountVerification.routeName : (context) => accountVerification(),
   homeScreen.routeName : (context) => homeScreen(),
   productDetails.routeName : (context) => productDetails(),
+  cartMain.routeName : (context) => cartMain(),
 };
