@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
+import '../../../models/cartModel.dart';
 import '../../../size_config.dart';
 
 class cartCounter extends StatelessWidget {
-  cartCounter({ this.itemCounter = 0,
+  cartCounter({ required this.itemCounter,
     required this.onPress
   });
 
-  final int itemCounter;
+  int itemCounter;
   final GestureTapCallback onPress;
 
   @override

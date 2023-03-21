@@ -40,12 +40,12 @@ class customNavBar extends StatelessWidget {
                   color: menuState.home == selectedMenu
                       ? kPrimaryColor
                       : inActiveMenuColor,)),
-            IconButton(
-                onPressed: (){},
-                icon: SvgPicture.asset("assets/icons/Heart Icon.svg",
-                    color: menuState.favorite == selectedMenu
-                        ? kPrimaryColor
-                        : inActiveMenuColor)),
+            // IconButton(
+            //     onPressed: (){},
+            //     icon: SvgPicture.asset("assets/icons/Heart Icon.svg",
+            //         color: menuState.favorite == selectedMenu
+            //             ? kPrimaryColor
+            //             : inActiveMenuColor)),
             IconButton(
                 onPressed: () => Navigator.pushNamed(context, cartMain.routeName),
                 icon: SvgPicture.asset("assets/icons/Cart Icon.svg",

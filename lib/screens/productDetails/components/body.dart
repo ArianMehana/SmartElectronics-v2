@@ -1,6 +1,7 @@
 import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/helpers/iconButton.dart';
+import 'package:e_commerce_v2/models/cartModel.dart';
 import 'package:e_commerce_v2/models/productModel.dart';
 import 'package:e_commerce_v2/screens/productDetails/components/productDescription.dart';
 import 'package:e_commerce_v2/screens/productDetails/components/productImages.dart';
@@ -18,6 +19,7 @@ class productDetailsBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Cart cart;
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -39,7 +41,9 @@ class productDetailsBody extends StatelessWidget {
                                 top: getProportionateScreenWidth(15),
                                 bottom: getProportionateScreenWidth(40)
                               ),
-                              child: ContinueButton(text: "Add to Cart", onPress: (){},),
+                              child: ContinueButton(text: "Add to Cart", onPress: (){
+                                testCart.add(Cart(products: products, itemNumber: 1));
+                              },),
                             ))
                       ],
                     )),

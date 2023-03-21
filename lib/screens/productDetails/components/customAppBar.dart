@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -35,7 +36,7 @@ class customAppBar extends StatelessWidget {
                   backgroundColor: Colors.white,
                   padding: EdgeInsets.zero,
                 ),
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => Navigator.pushNamed(context, homeScreen.routeName),
                 child: SvgPicture.asset(
                   "assets/icons/Back ICon.svg",
                   height: 15,

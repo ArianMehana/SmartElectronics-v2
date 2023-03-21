@@ -14,7 +14,7 @@ class cartItems extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: getProportionateScreenWidth(88),
+          width: getProportionateScreenWidth(50),
           child: AspectRatio(
             aspectRatio: 0.88,
             child: Container(
@@ -35,7 +35,7 @@ class cartItems extends StatelessWidget {
                 color: Colors.black,
                 fontSize: 16
             ),
-              maxLines: 2,),
+              maxLines: 3,),
             Text.rich(TextSpan(
                 text: "\$${cartItem.products.price}",
                 style: TextStyle(
