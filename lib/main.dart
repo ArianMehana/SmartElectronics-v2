@@ -1,5 +1,6 @@
 import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/navigationalRoutes.dart';
+import 'package:e_commerce_v2/profile/profile.dart';
 import 'package:e_commerce_v2/screens/splash/splashScreen.dart';
 import 'package:e_commerce_v2/themeData.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +13,6 @@ void main() {
         theme: themeData(),
         initialRoute: SplashScreen.routeName,
         routes: routes,
-        //home: SplashScreen(),
       ));
 }
 

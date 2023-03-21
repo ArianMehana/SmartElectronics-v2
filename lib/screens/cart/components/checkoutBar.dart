@@ -15,20 +15,20 @@ class checkoutBar extends StatelessWidget {
           horizontal: getProportionateScreenWidth(30),
           vertical: getProportionateScreenWidth(15)
       ),
-      decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30),
-              topRight: Radius.circular(30)
-          ),
-          boxShadow: [
-            BoxShadow(
-                offset: Offset(0, -15),
-                color: Color(0xFFDADADA),
-                blurRadius: 20
-            )
-          ]
-      ),
+      // decoration: BoxDecoration(
+      //     color: Colors.white,
+      //     borderRadius: BorderRadius.only(
+      //         topLeft: Radius.circular(30),
+      //         topRight: Radius.circular(30)
+      //     ),
+      //     boxShadow: [
+      //       BoxShadow(
+      //           offset: Offset(0, -15),
+      //           color: Color(0xFFDADADA),
+      //           blurRadius: 20
+      //       )
+      //     ]
+      // ),
       child: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -39,10 +39,10 @@ class checkoutBar extends StatelessWidget {
                   padding: EdgeInsets.all(10),
                   height: getProportionateScreenWidth(40),
                   width: getProportionateScreenWidth(40),
-                  decoration: BoxDecoration(
-                    color: Color(0xFFF5F6F9),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
+                  // decoration: BoxDecoration(
+                  //   color: Color(0xFFF5F6F9),
+                  //   borderRadius: BorderRadius.circular(10),
+                  // ),
                   child: SvgPicture.asset("assets/icons/receipt.svg"),
                 ),
                 Spacer(),
