@@ -1,4 +1,3 @@
-import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/models/cartModel.dart';
 import 'package:e_commerce_v2/size_config.dart';
@@ -6,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'cartItemCard.dart';
-import 'checkoutBar.dart';
 
 class cartBody extends StatefulWidget {
   const cartBody({Key? key}) : super(key: key);
