@@ -13,6 +13,7 @@ class homeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Products"),
         centerTitle: true,
+        automaticallyImplyLeading: false,
       ),
       body: homeBody(),
       bottomNavigationBar: customNavBar(selectedMenu: menuState.home,),

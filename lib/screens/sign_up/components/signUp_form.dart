@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/screens/complete_profile/complete_profile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -20,7 +21,28 @@ class _signUpFormState extends State<signUpForm> {
   String? email;
   String? password;
   String? confirmPassword;
+  final passwordController = TextEditingController();
+  final confirmPasswordController = TextEditingController();
+  final emailController = TextEditingController();
   final List<String> errors = [];
+
+  void sign_up() async{
+
+    try {
+      if(passwordController.text == confirmPasswordController.text) {
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
+            email: emailController.text,
+            password: passwordController.text);
+      }
+      else {
+        addError(error: "Passwords don't match");
+      }
+    } on FirebaseAuthException catch (e) {
+      addError(error: e.code);
+    }
+    await Future.delayed(Duration(milliseconds: 1200));
+    Navigator.pushNamed(context, "/products");
+  }
 
   void addError({String? error}) {
     if (!errors.contains(error))
@@ -51,6 +73,7 @@ class _signUpFormState extends State<signUpForm> {
             SizedBox(height: getProportionateScreenHeight(40),),
             ContinueButton(text: "Sign Up", onPress: (){
               if(_formKey.currentState!.validate()){
+                sign_up();
               Navigator.pushNamed(context, completeProfile.routeName);
               }
             }),

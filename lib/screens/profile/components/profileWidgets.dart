@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../constants.dart';
+import '../../../constants.dart';
+
 
 class profileWidgets extends StatelessWidget {
   const profileWidgets({Key? key, required this.icon, required this.text, required this.onPress}) : super(key: key);

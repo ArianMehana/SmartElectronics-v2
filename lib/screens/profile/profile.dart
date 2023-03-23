@@ -1,12 +1,12 @@
 import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/enums.dart';
-import 'package:e_commerce_v2/profile/components/body.dart';
 import 'package:e_commerce_v2/screens/cart/cart.dart';
 import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../helpers/customNavBar.dart';
+import '../../helpers/customNavBar.dart';
+import 'components/body.dart';
 
 class profile extends StatelessWidget {
   const profile({Key? key}) : super(key: key);

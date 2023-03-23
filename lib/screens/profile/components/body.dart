@@ -1,15 +1,24 @@
 import 'package:e_commerce_v2/constants.dart';
-import 'package:e_commerce_v2/profile/components/profilePicture.dart';
-import 'package:e_commerce_v2/profile/components/profileWidgets.dart';
+import 'package:e_commerce_v2/screens/profile/components/profilePicture.dart';
+import 'package:e_commerce_v2/screens/profile/components/profileWidgets.dart';
 import 'package:e_commerce_v2/screens/sign_in/sign_in.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class profileBody extends StatelessWidget {
   const profileBody({Key? key}) : super(key: key);
 
+
+
   @override
   Widget build(BuildContext context) {
+
+    void sign_out() {
+      FirebaseAuth.instance.signOut();
+      Navigator.pushNamed(context, "/auth");
+    }
+
     return Column(
       children: [
           profilePicture(),
@@ -28,7 +37,7 @@ class profileBody extends StatelessWidget {
         onPress: (){},),
         profileWidgets(text: "Log Out",
         icon: "assets/icons/Log out.svg",
-        onPress: () => Navigator.pushNamed(context, signInScreen.routeName),),
+        onPress: () => sign_out(),),
       ],
     );
   }

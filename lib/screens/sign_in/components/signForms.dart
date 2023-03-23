@@ -1,5 +1,6 @@
 import 'package:e_commerce_v2/screens/forgot_password/forgot_password.dart';
 import 'package:e_commerce_v2/screens/successful_login/successful_login.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -23,6 +24,9 @@ class _signFormsState extends State<signForms> {
   String? password = "";
   bool? rememberMe = false;
 
+  final emailController = TextEditingController();
+  final passwordController = TextEditingController();
+
   void addError({String? error}) {
     if (!errors.contains(error))
       setState(() {
@@ -35,6 +39,19 @@ class _signFormsState extends State<signForms> {
       setState(() {
         errors.remove(error);
       });
+  }
+
+  void sign_in() async{
+
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          email: emailController.text,
+          password: passwordController.text);
+      Navigator.pushNamed(context, successfulLogin.routeName);
+    } on FirebaseAuthException catch (e) {
+      addError(error: e.code);
+    }
+
   }
 
   @override
@@ -70,9 +87,9 @@ class _signFormsState extends State<signForms> {
             formErrorText(errors: errors),
             SizedBox(height: getProportionateScreenWidth(20),),
             ContinueButton(text: "Sign in", onPress: (){
-              if(_formKey.currentState!.validate()){
+              if(_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
-                Navigator.pushNamed(context, successfulLogin.routeName);
+                sign_in();
               }
             },),
           ],
@@ -82,6 +99,7 @@ class _signFormsState extends State<signForms> {
   TextFormField buildPasswordTextField() {
     return TextFormField(
       obscureText: true,
+      controller: passwordController,
       onSaved: (newValue) => password = newValue!,
       onChanged: (value) {
         if(value.isNotEmpty){   //value! should be nullable...
@@ -117,6 +135,7 @@ class _signFormsState extends State<signForms> {
   TextFormField buildEmailTextField() {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
+      controller: emailController,
       onSaved: (newValue) => email = newValue!,
       onChanged: (value){
         if(value.isNotEmpty){   //value! should be nullable...

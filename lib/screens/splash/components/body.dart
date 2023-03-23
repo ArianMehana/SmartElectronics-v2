@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/helpers/checkLoginStatus.dart';
 import 'package:e_commerce_v2/screens/sign_in/sign_in.dart';
 import 'package:e_commerce_v2/screens/splash/components/splash_content.dart';
 import 'package:e_commerce_v2/size_config.dart';
@@ -68,7 +69,7 @@ class _BodyState extends State<Body> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: ContinueButton(text: "Continue", onPress: (){
-                      Navigator.pushNamed(context, signInScreen.routeName);
+                      Navigator.pushNamed(context, "/auth");
                     },),
                   ),
                 SizedBox(),
