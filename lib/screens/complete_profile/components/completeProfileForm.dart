@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:e_commerce_v2/screens/accountVerification/verification_screen.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -16,12 +18,40 @@ class completeProfileForm extends StatefulWidget {
 
 class _completeProfileFormState extends State<completeProfileForm> {
 
+  final firstNameController = TextEditingController();
+  final lastNameController = TextEditingController();
+  final phoneNumberController = TextEditingController();
+  final addressController = TextEditingController();
+
   final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
   String? firstName;
   String? lastName;
   String? phoneNumber;
   String? address;
+
+  @override
+  void dispose(){
+    firstNameController.dispose();
+    lastNameController.dispose();
+    lastNameController.dispose();
+    addressController.dispose();
+    super.dispose();
+  }
+
+  Future registerUser(String firstName, String lastName, String phoneNo, String address) async {
+    try {
+      await FirebaseFirestore.instance.collection('users').add({
+        'first name': firstName,
+        'last name': lastName,
+        'phone number': phoneNo,
+        'address': address
+      });
+    }
+    on FirebaseException catch (e){
+      print(e.message);
+    }
+  }
 
   void addError({String? error}) {
     if (!errors.contains(error))
@@ -56,6 +86,8 @@ class _completeProfileFormState extends State<completeProfileForm> {
             text: "continue",
             onPress: () {
               if (_formKey.currentState!.validate()) {
+                registerUser(firstNameController.text.trim(), lastNameController.text.trim(),
+                    phoneNumberController.text.trim(), addressController.text.trim());
                 Navigator.pushNamed(context, accountVerification.routeName);
               }
             },
@@ -67,6 +99,7 @@ class _completeProfileFormState extends State<completeProfileForm> {
 
   TextFormField buildAddressFormField() {
     return TextFormField(
+      controller: addressController,
       onSaved: (newValue) => address = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
@@ -93,6 +126,7 @@ class _completeProfileFormState extends State<completeProfileForm> {
 
   TextFormField buildPhoneNumberFormField() {
     return TextFormField(
+      controller: phoneNumberController,
       keyboardType: TextInputType.phone,
       onSaved: (newValue) => phoneNumber = newValue,
       onChanged: (value) {
@@ -119,6 +153,7 @@ class _completeProfileFormState extends State<completeProfileForm> {
 
   TextFormField buildLastNameFormField() {
     return TextFormField(
+      controller: lastNameController,
       onSaved: (newValue) => lastName = newValue,
       decoration: InputDecoration(
         labelText: "Last Name",
@@ -131,6 +166,7 @@ class _completeProfileFormState extends State<completeProfileForm> {
 
   TextFormField buildFirstNameFormField() {
     return TextFormField(
+      controller: firstNameController,
       onSaved: (newValue) => firstName = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {

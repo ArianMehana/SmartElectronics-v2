@@ -39,9 +39,10 @@ class _signUpFormState extends State<signUpForm> {
       }
     } on FirebaseAuthException catch (e) {
       addError(error: e.code);
+      print(e.message);
     }
-    await Future.delayed(Duration(milliseconds: 1200));
-    Navigator.pushNamed(context, "/products");
+    await Future.delayed(Duration(milliseconds: 1000));
+    Navigator.pushNamed(context, completeProfile.routeName);
   }
 
   void addError({String? error}) {
@@ -74,7 +75,6 @@ class _signUpFormState extends State<signUpForm> {
             ContinueButton(text: "Sign Up", onPress: (){
               if(_formKey.currentState!.validate()){
                 sign_up();
-              Navigator.pushNamed(context, completeProfile.routeName);
               }
             }),
           ],
@@ -83,6 +83,7 @@ class _signUpFormState extends State<signUpForm> {
 
   TextFormField buildConfirmPasswordFormField() {
     return TextFormField(
+      controller: confirmPasswordController,
       obscureText: true,
       onSaved: (newValue) => confirmPassword = newValue!,
       onChanged: (value) {
@@ -103,7 +104,7 @@ class _signUpFormState extends State<signUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Please re-enter your password",
+        hintText: "Re-enter your password",
         labelText: "Confirm Password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: customSuffixIcon(
@@ -114,6 +115,7 @@ class _signUpFormState extends State<signUpForm> {
 
   TextFormField buildPasswordFormField2() {
     return TextFormField(
+      controller: passwordController,
       obscureText: true,
       onSaved: (newValue) => password = newValue!,
       onChanged: (value) {
@@ -138,7 +140,7 @@ class _signUpFormState extends State<signUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Please enter your password",
+        hintText: "Enter your password",
         labelText: "Password",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: customSuffixIcon(
@@ -149,6 +151,7 @@ class _signUpFormState extends State<signUpForm> {
 
   TextFormField buildEmailFormField2() {
     return TextFormField(
+      controller: emailController,
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue!,
       onChanged: (value){
@@ -174,7 +177,7 @@ class _signUpFormState extends State<signUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        hintText: "Please enter your e-mail",
+        hintText: "Enter your e-mail",
         labelText: "Email",
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: customSuffixIcon(

@@ -1,3 +1,4 @@
+import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -110,7 +111,9 @@ class _verificationFormState extends State<verificationForm> {
           ],
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.15,),
-        ContinueButton(text: "Cotinue", onPress: (){})
+        ContinueButton(text: "Cotinue", onPress: (){
+          Navigator.pushNamed(context, homeScreen.routeName);
+        })
       ],
     ));
   }

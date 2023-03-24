@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/screens/complete_profile/complete_profile.dart';
 import 'package:e_commerce_v2/screens/profile/components/profilePicture.dart';
 import 'package:e_commerce_v2/screens/profile/components/profileWidgets.dart';
 import 'package:e_commerce_v2/screens/sign_in/sign_in.dart';
@@ -25,7 +26,7 @@ class profileBody extends StatelessWidget {
         SizedBox(height: 20,),
         profileWidgets(text: "My Profile",
         icon: "assets/icons/User Icon.svg",
-        onPress: (){},),
+        onPress: () => Navigator.pushNamed(context, completeProfile.routeName),),
         profileWidgets(text: "About Us",
         icon: "assets/icons/User Icon.svg",
         onPress: (){},),
