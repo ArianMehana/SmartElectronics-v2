@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../size_config.dart';
+import '../utilities/size_config.dart';
 
 class iconButton extends StatelessWidget {
   const iconButton({Key? key, required this.iconData, required this.onPress}) : super(key: key);

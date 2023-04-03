@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../size_config.dart';
+import '../utilities/size_config.dart';
 
 class socialMedia extends StatelessWidget {
   const socialMedia({Key? key, required this.icon, required this.onPress}) : super(key: key);

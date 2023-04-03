@@ -2,7 +2,8 @@ import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
+
 
 class successLoginBody extends StatelessWidget {
   const successLoginBody({Key? key}) : super(key: key);

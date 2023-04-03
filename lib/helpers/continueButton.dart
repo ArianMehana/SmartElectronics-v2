@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants.dart';
-import '../size_config.dart';
+import '../utilities/constants.dart';
+import '../utilities/size_config.dart';
 
 class ContinueButton extends StatelessWidget {
   const ContinueButton({Key? key, required this.text, required this.onPress}) : super(key: key);

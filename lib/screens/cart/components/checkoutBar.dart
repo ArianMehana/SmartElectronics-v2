@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../helpers/continueButton.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class checkoutBar extends StatelessWidget {
   const checkoutBar({Key? key}) : super(key: key);

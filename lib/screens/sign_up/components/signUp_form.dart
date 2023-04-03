@@ -2,11 +2,11 @@ import 'package:e_commerce_v2/screens/complete_profile/complete_profile.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../helpers/continueButton.dart';
 import '../../../helpers/customSuffixIcon.dart';
 import '../../../helpers/formErrors.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class signUpForm extends StatefulWidget {
   const signUpForm({Key? key}) : super(key: key);

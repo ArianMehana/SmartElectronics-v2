@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../models/productModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class productImages extends StatefulWidget {
   const productImages({Key? key, required this.productPics}) : super(key: key);

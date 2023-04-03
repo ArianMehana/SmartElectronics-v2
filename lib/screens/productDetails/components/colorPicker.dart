@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../helpers/iconButton.dart';
 import '../../../models/productModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class colorPicker extends StatelessWidget {
   const colorPicker({Key? key, required this.products}) : super(key: key);

@@ -4,8 +4,8 @@ import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../constants.dart';
-import '../../../size_config.dart';
+import '../../../utilities/constants.dart';
+import '../../../utilities/size_config.dart';
 
 class customAppBar extends StatelessWidget {
   final double rating;

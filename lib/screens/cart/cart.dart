@@ -1,8 +1,7 @@
-import 'package:e_commerce_v2/constants.dart';
-import 'package:e_commerce_v2/enums.dart';
+import 'package:e_commerce_v2/utilities/constants.dart';
+import 'package:e_commerce_v2/utilities/enums.dart';
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/helpers/customNavBar.dart';
-import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:e_commerce_v2/models/cartModel.dart';
 import 'package:flutter_svg/flutter_svg.dart';

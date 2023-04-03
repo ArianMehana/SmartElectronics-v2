@@ -1,4 +1,4 @@
-import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/utilities/constants.dart';
 import 'package:e_commerce_v2/screens/complete_profile/complete_profile.dart';
 import 'package:e_commerce_v2/screens/profile/components/profilePicture.dart';
 import 'package:e_commerce_v2/screens/profile/components/profileWidgets.dart';

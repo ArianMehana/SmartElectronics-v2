@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
+
 
 class roundedImageContainer extends StatelessWidget {
   const roundedImageContainer({Key? key, required this.color, required this.child}) : super(key: key);

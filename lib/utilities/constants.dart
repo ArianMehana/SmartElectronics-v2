@@ -1,5 +1,6 @@
-import 'package:e_commerce_v2/size_config.dart';
+import 'package:e_commerce_v2/utilities/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 const kPrimaryColor = Color(0xFFFF7643);
 const kPrimaryLightColor = Color(0xFFFFECDF);
@@ -34,6 +35,9 @@ const String kNameNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
 
+final RegExp phoneRegExp = RegExp(r'^(?:[+0]9)?[0-9]{10}$');
+const String kPhoneNumberError = "Please enter a valid number";
+
 final verificationInputDecoration = InputDecoration(
   contentPadding:
   EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
@@ -48,3 +52,27 @@ OutlineInputBorder outlineInputBorder() {
     borderSide: BorderSide(color: kTextColor),
   );
 }
+
+final defaultPinTheme = PinTheme(
+  width: 56,
+  height: 56,
+  textStyle: TextStyle(
+      fontSize: 20,
+      color: Color.fromRGBO(30, 60, 87, 1),
+      fontWeight: FontWeight.w600),
+  decoration: BoxDecoration(
+    border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+    borderRadius: BorderRadius.circular(20),
+  ),
+);
+
+final focusedPinTheme = defaultPinTheme.copyDecorationWith(
+  border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+  borderRadius: BorderRadius.circular(8),
+);
+
+final submittedPinTheme = defaultPinTheme.copyWith(
+  decoration: defaultPinTheme.decoration?.copyWith(
+    color: Color.fromRGBO(234, 239, 243, 1),
+  ),
+);

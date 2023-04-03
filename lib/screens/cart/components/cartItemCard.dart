@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../models/cartModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class cartItems extends StatelessWidget {
   const cartItems({Key? key, required this.cartItem}) : super(key: key);

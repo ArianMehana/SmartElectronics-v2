@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../size_config.dart';
+import '../utilities/size_config.dart';
+
 
 class formErrorText extends StatelessWidget {
   const formErrorText({Key? key, required this.errors}) : super(key: key);

@@ -1,11 +1,11 @@
-import 'package:e_commerce_v2/constants.dart';
 import 'package:e_commerce_v2/helpers/checkLoginStatus.dart';
 import 'package:e_commerce_v2/screens/sign_in/sign_in.dart';
 import 'package:e_commerce_v2/screens/splash/components/splash_content.dart';
-import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../../helpers/continueButton.dart';
+import '../../../utilities/constants.dart';
+import '../../../utilities/size_config.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);

@@ -3,7 +3,7 @@ import 'package:e_commerce_v2/screens/home/components/searchTextField.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/cartModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 import 'cartWithCounter.dart';
 
 class mainProductsHeader extends StatelessWidget {

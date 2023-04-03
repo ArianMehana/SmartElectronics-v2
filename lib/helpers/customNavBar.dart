@@ -3,10 +3,9 @@ import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:e_commerce_v2/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:e_commerce_v2/navigationalRoutes.dart';
 
-import '../constants.dart';
-import '../enums.dart';
+import '../utilities/constants.dart';
+import '../utilities/enums.dart';
 
 class customNavBar extends StatelessWidget {
   const customNavBar({Key? key, required this.selectedMenu}) : super(key: key);

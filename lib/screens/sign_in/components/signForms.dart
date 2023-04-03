@@ -3,11 +3,11 @@ import 'package:e_commerce_v2/screens/successful_login/successful_login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../helpers/continueButton.dart';
 import '../../../helpers/customSuffixIcon.dart';
 import '../../../helpers/formErrors.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class signForms extends StatefulWidget {
   const signForms({Key? key}) : super(key: key);

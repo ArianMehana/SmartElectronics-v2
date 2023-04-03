@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../size_config.dart';
+import '../utilities/size_config.dart';
 
 class sectionTitle extends StatelessWidget {
   const sectionTitle({Key? key, required this.text, required this.onPress}) : super(key: key);

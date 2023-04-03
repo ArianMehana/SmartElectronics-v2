@@ -1,5 +1,5 @@
-import 'package:e_commerce_v2/constants.dart';
-import 'package:e_commerce_v2/enums.dart';
+import 'package:e_commerce_v2/utilities/constants.dart';
+import 'package:e_commerce_v2/utilities/enums.dart';
 import 'package:e_commerce_v2/screens/cart/cart.dart';
 import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:flutter/material.dart';

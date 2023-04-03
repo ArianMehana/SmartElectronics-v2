@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../constants.dart';
+import '../utilities/constants.dart';
 import '../models/productModel.dart';
-import '../size_config.dart';
+import '../utilities/size_config.dart';
 
 class productCard extends StatelessWidget {
   const productCard({Key? key, this.width = 140, this.aspectRatio = 1.02, required this.productSample, required this.onPress}) : super(key: key);

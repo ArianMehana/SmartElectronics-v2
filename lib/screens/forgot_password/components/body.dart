@@ -1,12 +1,12 @@
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/helpers/formErrors.dart';
 import 'package:e_commerce_v2/helpers/signUpText.dart';
-import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:quickalert/quickalert.dart';
 
-import '../../../constants.dart';
+import '../../../utilities/constants.dart';
 import '../../../helpers/customSuffixIcon.dart';
+import '../../../utilities/size_config.dart';
 
 class forgotPassBody extends StatelessWidget {
   const forgotPassBody({Key? key}) : super(key: key);

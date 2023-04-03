@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../models/productModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class productDescription extends StatelessWidget {
   const productDescription({Key? key, required this.products}) : super(key: key);

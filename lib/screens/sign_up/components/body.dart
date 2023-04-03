@@ -1,12 +1,12 @@
-import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/utilities/constants.dart';
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/helpers/formErrors.dart';
 import 'package:e_commerce_v2/screens/sign_up/components/signUp_form.dart';
-import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../../../helpers/customSuffixIcon.dart';
 import '../../../helpers/socialMedia.dart';
+import '../../../utilities/size_config.dart';
 
 class signUpBody extends StatelessWidget {
   const signUpBody({Key? key}) : super(key: key);

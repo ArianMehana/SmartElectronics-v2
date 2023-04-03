@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
+
 
 class discountContainer extends StatelessWidget {
   const discountContainer({Key? key}) : super(key: key);

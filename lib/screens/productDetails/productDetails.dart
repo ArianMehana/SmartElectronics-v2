@@ -1,10 +1,9 @@
 import 'package:e_commerce_v2/screens/productDetails/components/body.dart';
 import 'package:e_commerce_v2/screens/productDetails/components/customAppBar.dart';
-import 'package:e_commerce_v2/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../constants.dart';
+import '../../utilities/constants.dart';
 import '../../helpers/iconButton.dart';
 import '../../models/productModel.dart';
 

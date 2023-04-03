@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import '../../../helpers/productCard.dart';
 import '../../../helpers/sectionTitle.dart';
 import '../../../models/productModel.dart';
-import '../../../size_config.dart';
+import '../../../utilities/size_config.dart';
 
 class popularProducts extends StatelessWidget {
   const popularProducts({Key? key}) : super(key: key);

@@ -1,9 +1,8 @@
-import 'package:e_commerce_v2/constants.dart';
+import 'package:e_commerce_v2/utilities/constants.dart';
 import 'package:e_commerce_v2/helpers/continueButton.dart';
 import 'package:e_commerce_v2/screens/forgot_password/forgot_password.dart';
 import 'package:e_commerce_v2/screens/sign_in/components/signForms.dart';
-import 'package:e_commerce_v2/size_config.dart';
-import 'package:e_commerce_v2/themeData.dart';
+import 'package:e_commerce_v2/utilities/themeData.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -11,6 +10,7 @@ import '../../../helpers/customSuffixIcon.dart';
 import '../../../helpers/formErrors.dart';
 import '../../../helpers/signUpText.dart';
 import '../../../helpers/socialMedia.dart';
+import '../../../utilities/size_config.dart';
 
 class signInBody extends StatelessWidget {
   const signInBody({Key? key}) : super(key: key);
