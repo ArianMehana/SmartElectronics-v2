@@ -115,7 +115,8 @@ class _verificationFormState extends State<verificationForm> {
                   inputCode = pin1Controller.text + pin2Controller.text +
                       pin3Controller.text + pin4Controller.text +
                       pin5Controller.text + pin6Controller.text;
-                  print(inputCode);
+                  //print(inputCode);
+                  otpPin = inputCode;
                   pin6Node.unfocus();
                 },
               )

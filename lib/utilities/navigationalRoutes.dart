@@ -6,6 +6,7 @@ import 'package:e_commerce_v2/screens/forgot_password/forgot_password.dart';
 import 'package:e_commerce_v2/screens/home/homeScreen.dart';
 import 'package:e_commerce_v2/screens/productDetails/productDetails.dart';
 import 'package:e_commerce_v2/screens/profile/profile.dart';
+import 'package:e_commerce_v2/screens/profile/userProfile/userProfileScreen.dart';
 import 'package:e_commerce_v2/screens/sign_in/sign_in.dart';
 import 'package:e_commerce_v2/screens/sign_up/sign_up.dart';
 import 'package:e_commerce_v2/screens/splash/splashScreen.dart';
@@ -24,6 +25,7 @@ final Map<String, WidgetBuilder> routes = {
   productDetails.routeName : (context) => productDetails(),
   cartMain.routeName : (context) => cartMain(),
   profile.routeName : (context) => profile(),
+  userProfile.routeName : (context) =>userProfile(),
   "/auth" : (context) => checkLoginState(),
 
   "/home" : (context) =>homeScreen(),

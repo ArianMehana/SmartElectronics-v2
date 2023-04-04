@@ -34,6 +34,7 @@ const String kMatchPassError = "Passwords don't match";
 const String kNameNullError = "Please Enter your name";
 const String kPhoneNumberNullError = "Please Enter your phone number";
 const String kAddressNullError = "Please Enter your address";
+const String kFieldNullError = "Please enter your data";
 
 final RegExp phoneRegExp = RegExp(r'^(?:[+0]9)?[0-9]{10}$');
 const String kPhoneNumberError = "Please enter a valid number";
