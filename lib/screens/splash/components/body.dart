@@ -68,9 +68,7 @@ class _BodyState extends State<Body> {
                   Spacer(),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 20),
-                    child: ContinueButton(text: "Continue", onPress: (){
-                      Navigator.pushNamed(context, "/auth");
-                    },),
+                    child: ContinueButton(text: "Continue", onPress: ()=>Navigator.pushNamed(context, "/auth"),),
                   ),
                 SizedBox(),
               ],

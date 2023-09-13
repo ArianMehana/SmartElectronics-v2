@@ -1,4 +1,5 @@
 import 'package:e_commerce_v2/screens/sign_in/components/body.dart';
+import 'package:e_commerce_v2/screens/splash/splashScreen.dart';
 import 'package:flutter/material.dart';
 
 class signInScreen extends StatelessWidget {
@@ -10,6 +11,9 @@ class signInScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("Sign In"),
         centerTitle: true,
+        leading: IconButton(onPressed: () { 
+          Navigator.pushNamed(context, SplashScreen.routeName);
+        }, icon: Icon(Icons.arrow_back_ios),),
       ),
       body: signInBody(),
     );
